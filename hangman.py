@@ -4,9 +4,12 @@ def play():
     print("✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝✝︎✝︎✝︎✝︎")
 
     secret_word = "banana"
+    hits_letters = ["_","_","_","_","_","_"]
 
     wrong = False
     right = False
+
+    print(hits_letters)
 
     while(not wrong and not right):
 
@@ -16,10 +19,10 @@ def play():
         index = 0
         for letter in secret_word:
             if(shot.upper() == letter.upper()):
-                print("Find the letter {} on the position {}".format(letter, index))
+                hits_letters[index] = letter
             index = index + 1    
 
-        print("playing...")
+        print(hits_letters)
 
     print("Game Over")
 
