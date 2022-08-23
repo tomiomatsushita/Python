@@ -1,10 +1,25 @@
+import random
+
 def play():
     print("✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎")
     print("✝✝✝Welcome to Hangman Game!✝︎✝︎✝︎")
     print("✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝✝︎✝︎✝︎✝︎")
 
-    secret_word = "banana".upper()
-    hit_letter = ["_" for letter in ]
+    # add a text file with a list of words
+    # to use it for generate random words
+
+    file = open("words_for_hangman_game.txt", "r")
+    words = []
+
+    for line in file:
+        line = line.strip()
+        words.append(line)
+
+    file.close()
+
+    number = random.randrange(0,len(words))
+    secret_word = words[number].upper()    
+    hit_letter = ["_" for letter in secret_word]
 
     # To make the code more readable,
     # the lines of code below have been 
