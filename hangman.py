@@ -4,7 +4,15 @@ def play():
     print("✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝︎✝✝︎✝︎✝︎✝︎")
 
     secret_word = "banana".upper()
-    hit_letter = ["_","_","_","_","_","_"]
+    hit_letter = ["_" for letter in ]
+
+    # To make the code more readable,
+    # the lines of code below have been 
+    # replaced by a command defined on just one line
+    # which can be seen above in the hit_letter variable 
+    # with the feature of list List Comprehension
+    # for letter in secret_word:
+    #    hit_letter.append("_")
 
     wrong = False
     right = False
